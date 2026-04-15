@@ -23,7 +23,7 @@ export default function FeaturedProducts() {
           </div>
           <Link
             to="/products"
-            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-primary hover:text-primary/80 transition-colors shrink-0"
+            className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-wide text-[#7d5a06] hover:text-[#5c420a] transition-colors shrink-0"
           >
             View All Products
             <ArrowRight className="w-4 h-4" />

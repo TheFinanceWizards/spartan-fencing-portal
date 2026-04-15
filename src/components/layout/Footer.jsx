@@ -91,10 +91,10 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-background/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-background/40">
+          <p className="text-xs text-background/60">
             © {new Date().getFullYear()} Spartan Fencing Supplies. All rights reserved.
           </p>
-          <p className="text-xs text-background/40">
+          <p className="text-xs text-background/60">
             Serving contractors & property owners since 1989
           </p>
         </div>
