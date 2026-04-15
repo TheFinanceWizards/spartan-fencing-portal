@@ -10,7 +10,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <img
-              src="https://media.base44.com/images/public/69bd8c7f45d3f9291e5cc858/274445324_qtq_95.jpg"
+              src="/images/logo.webp"
               alt="Spartan Fencing Supplies"
               className="h-14 w-auto brightness-0 invert opacity-80"
             />

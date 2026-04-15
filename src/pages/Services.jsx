@@ -72,7 +72,7 @@ export default function Services() {
             </div>
             <div className="relative">
               <img
-                src="https://media.base44.com/images/public/69bd8c7f45d3f9291e5cc858/bd5ff7247_generated_21b0f842.png"
+                src="/images/gates-frames.webp"
                 alt="Contractor gate fabrication"
                 width={600}
                 height={320}

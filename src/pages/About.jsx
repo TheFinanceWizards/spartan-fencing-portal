@@ -60,7 +60,7 @@ export default function About() {
             </div>
             <div>
               <img
-                src="https://media.base44.com/images/public/69bd8c7f45d3f9291e5cc858/bd5ff7247_generated_21b0f842.png"
+                src="/images/gates-frames.webp"
                 alt="Spartan Fencing yard and operations"
                 className="rounded-xl w-full h-96 object-cover shadow-xl"
               />

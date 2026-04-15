@@ -36,7 +36,7 @@ export default function Navbar() {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img
-              src="https://media.base44.com/images/public/69bd8c7f45d3f9291e5cc858/274445324_qtq_95.jpg"
+              src="/images/logo.webp"
               alt="Spartan Fencing Supplies"
               width={160}
               height={48}
@@ -87,7 +87,7 @@ export default function Navbar() {
               <div className="flex flex-col h-full">
                 <div className="p-6 border-b border-border bg-[#1a1e2a]">
                   <img
-                    src="https://media.base44.com/images/public/69bd8c7f45d3f9291e5cc858/274445324_qtq_95.jpg"
+                    src="/images/logo.webp"
                     alt="Spartan Fencing Supplies"
                     className="h-10 w-auto"
                   />
