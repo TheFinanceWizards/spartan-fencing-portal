@@ -74,6 +74,10 @@ export default function Services() {
               <img
                 src="https://media.base44.com/images/public/69bd8c7f45d3f9291e5cc858/bd5ff7247_generated_21b0f842.png"
                 alt="Contractor gate fabrication"
+                width={600}
+                height={320}
+                loading="lazy"
+                decoding="async"
                 className="rounded-xl w-full h-80 object-cover opacity-80"
               />
               <div className="absolute inset-0 rounded-xl ring-1 ring-white/10" />
