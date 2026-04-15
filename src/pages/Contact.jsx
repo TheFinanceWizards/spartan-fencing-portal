@@ -1,6 +1,29 @@
 import React from "react";
 import { Phone, Mail, MapPin, Clock } from "lucide-react";
 import QuoteForm from "@/components/contact/QuoteForm";
+import SEO from "@/components/SEO";
+
+const CONTACT_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "url": "https://spartan-fencing-portal.vercel.app/contact",
+  "name": "Contact Spartan Fencing Supplies",
+  "description": "Request a quote or get in touch with Spartan Fencing Supplies. We serve contractors and property owners across South Florida.",
+  "mainEntity": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Spartan Fencing Supplies",
+    "telephone": "+18005551234",
+    "email": "sales@spartanfencing.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1200 Industrial Blvd",
+      "addressLocality": "Miami",
+      "addressRegion": "FL",
+      "postalCode": "33125",
+      "addressCountry": "US"
+    }
+  }
+};
 
 const CONTACT_INFO = [
   { icon: Phone, label: "Phone", value: "(800) 555-1234", href: "tel:+18005551234" },
@@ -12,6 +35,12 @@ const CONTACT_INFO = [
 export default function Contact() {
   return (
     <div className="pt-20">
+      <SEO
+        title="Contact Us & Get a Quote"
+        description="Request a quote or reach out to Spartan Fencing Supplies. Call (800) 555-1234, email sales@spartanfencing.com, or fill out our quick quote form. Miami, FL."
+        canonical="/contact"
+        jsonLd={CONTACT_JSON_LD}
+      />
       {/* Header */}
       <section className="bg-[#1a1e2a] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

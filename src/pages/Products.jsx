@@ -2,8 +2,23 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { PRODUCT_CATEGORIES } from "@/lib/productData";
 import ProductCard from "@/components/products/ProductCard";
+import SEO from "@/components/SEO";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
+
+const PRODUCTS_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "name": "Spartan Fencing Products",
+  "description": "Complete inventory of fencing materials including chain link, ornamental iron, vinyl, gates, and hardware.",
+  "url": "https://spartan-fencing-portal.vercel.app/products",
+  "itemListElement": PRODUCT_CATEGORIES.map((p, i) => ({
+    "@type": "ListItem",
+    "position": i + 1,
+    "name": p.name,
+    "description": p.description.slice(0, 200)
+  }))
+};
 
 export default function Products() {
   const [search, setSearch] = useState("");
@@ -15,6 +30,12 @@ export default function Products() {
 
   return (
     <div className="pt-20">
+      <SEO
+        title="Fencing Products & Materials"
+        description="Browse Spartan's full inventory — chain link, ornamental iron, vinyl fencing, gates, pipes, barbed wire, hardware, and more. Contractor pricing available."
+        canonical="/products"
+        jsonLd={PRODUCTS_JSON_LD}
+      />
       {/* Page Header */}
       <section className="bg-[#1a1e2a] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

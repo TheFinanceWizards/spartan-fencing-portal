@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { STATS } from "@/lib/productData";
+import SEO from "@/components/SEO";
 
 const VALUES = [
   { title: "Quality Without Compromise", body: "Every product we stock is vetted against industry specifications. If it doesn't meet the standard, it doesn't go on our shelf." },
@@ -11,9 +12,31 @@ const VALUES = [
   { title: "Partnership Over Transaction", body: "Our best clients aren't just customers, they're long-term partners. We invest in those relationships with competitive pricing, flexible terms, and real support." },
 ];
 
+const ABOUT_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "url": "https://spartan-fencing-portal.vercel.app/about",
+  "name": "About Spartan Fencing Supplies",
+  "description": "Founded in 1989, Spartan Fencing Supplies has grown into one of South Florida's most trusted fencing supply operations — serving contractors and property owners for over 35 years.",
+  "mainEntity": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Spartan Fencing Supplies",
+    "foundingDate": "1989",
+    "numberOfEmployees": { "@type": "QuantitativeValue", "value": "25" },
+    "slogan": "Quality you can trust, prices that compete."
+  }
+};
+
 export default function About() {
   return (
     <div className="pt-20">
+      <SEO
+        title="About Us — South Florida's Fencing Supply Leader Since 1989"
+        description="Founded in 1989, Spartan Fencing Supplies has served South Florida's contractors and property owners for over 35 years with quality materials, honest pricing, and 98% on-time delivery."
+        canonical="/about"
+        ogImage="https://spartan-fencing-portal.vercel.app/images/gates-frames.webp"
+        jsonLd={ABOUT_JSON_LD}
+      />
       {/* Header */}
       <section className="bg-[#1a1e2a] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

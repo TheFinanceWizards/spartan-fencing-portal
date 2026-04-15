@@ -1,9 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
+import SEO from "@/components/SEO";
 
 export default function PageNotFound() {
   return (
+    <>
+      <SEO
+        title="Page Not Found"
+        description="The page you're looking for doesn't exist. Return to Spartan Fencing Supplies to browse our fencing materials and contractor services."
+        canonical="/404"
+      />
     <div className="min-h-screen bg-background flex items-center justify-center px-4">
       <div className="text-center max-w-md">
         <p className="text-8xl font-black text-primary mb-4" style={{ fontFamily: 'Montserrat, sans-serif' }}>404</p>
@@ -17,5 +24,6 @@ export default function PageNotFound() {
         </Link>
       </div>
     </div>
+    </>
   );
 }

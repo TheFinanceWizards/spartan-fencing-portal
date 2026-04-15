@@ -4,10 +4,41 @@ import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { SERVICES } from "@/lib/productData";
 import ServiceCard from "@/components/services/ServiceCard";
+import SEO from "@/components/SEO";
+
+const SERVICES_JSON_LD = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Fencing Supply & Contractor Services",
+  "provider": {
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Spartan Fencing Supplies",
+    "url": "https://spartan-fencing-portal.vercel.app"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Contractor Services",
+    "itemListElement": SERVICES.map((s, i) => ({
+      "@type": "Offer",
+      "position": i + 1,
+      "itemOffered": {
+        "@type": "Service",
+        "name": s.title,
+        "description": s.description
+      }
+    }))
+  }
+};
 
 export default function Services() {
   return (
     <div className="pt-20">
+      <SEO
+        title="Fencing Services for Contractors & Property Owners"
+        description="Custom fabrication, contractor supply programs, material estimation, fleet delivery, technical consultation, and cut-to-length processing — all in one place."
+        canonical="/services"
+        jsonLd={SERVICES_JSON_LD}
+      />
       {/* Page Header */}
       <section className="bg-[#1a1e2a] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
