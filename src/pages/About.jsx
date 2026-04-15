@@ -33,7 +33,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-primary text-xs font-bold uppercase tracking-[0.2em]">Since 1989</span>
+              <span className="text-[#7d5a06] text-xs font-bold uppercase tracking-[0.2em]">Since 1989</span>
               <h2 className="text-4xl font-black text-foreground mt-2 mb-6">
                 BUILT ON THE BELIEF
                 <br />

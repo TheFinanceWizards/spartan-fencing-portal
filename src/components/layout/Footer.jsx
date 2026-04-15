@@ -22,9 +22,9 @@ export default function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-background/80">
+            <p className="font-semibold text-sm uppercase tracking-wider mb-4 text-background/80">
               Products
-            </h4>
+            </p>
             <ul className="space-y-2.5">
               {["Chain Link Fencing", "Ornamental Iron", "Wood Hardware", "Vinyl Fencing", "Gates & Frames", "Hardware & Fittings"].map((item) => (
                 <li key={item}>
@@ -38,9 +38,9 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-background/80">
+            <p className="font-semibold text-sm uppercase tracking-wider mb-4 text-background/80">
               Company
-            </h4>
+            </p>
             <ul className="space-y-2.5">
               {[
                 { label: "About Us", path: "/about" },
@@ -60,9 +60,9 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-semibold text-sm uppercase tracking-wider mb-4 text-background/80">
+            <p className="font-semibold text-sm uppercase tracking-wider mb-4 text-background/80">
               Contact
-            </h4>
+            </p>
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-primary mt-0.5 shrink-0" />

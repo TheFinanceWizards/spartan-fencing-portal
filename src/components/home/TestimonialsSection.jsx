@@ -8,7 +8,7 @@ export default function TestimonialsSection() {
     <section className="py-24 bg-secondary/40">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-14">
-          <span className="text-primary text-xs font-bold uppercase tracking-[0.2em]">Client Reviews</span>
+          <span className="text-[#7d5a06] text-xs font-bold uppercase tracking-[0.2em]">Client Reviews</span>
           <h2 className="text-4xl md:text-5xl font-black text-foreground mt-2">
             WHAT THE PROS SAY
           </h2>

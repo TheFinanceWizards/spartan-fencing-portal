@@ -38,6 +38,9 @@ export default function Navbar() {
             <img
               src="https://media.base44.com/images/public/69bd8c7f45d3f9291e5cc858/274445324_qtq_95.jpg"
               alt="Spartan Fencing Supplies"
+              width={160}
+              height={48}
+              fetchpriority="high"
               className="h-12 w-auto"
             />
           </Link>
@@ -76,8 +79,8 @@ export default function Navbar() {
           {/* Mobile Menu */}
           <Sheet open={open} onOpenChange={setOpen}>
             <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="text-white hover:text-white hover:bg-white/10">
-                <Menu className="w-5 h-5" />
+              <Button variant="ghost" size="icon" aria-label="Open navigation menu" className="text-white hover:text-white hover:bg-white/10">
+                <Menu className="w-5 h-5" aria-hidden="true" />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-72 p-0">

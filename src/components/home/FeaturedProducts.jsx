@@ -14,7 +14,7 @@ export default function FeaturedProducts() {
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-14">
           <div>
-            <span className="text-primary text-xs font-bold uppercase tracking-[0.2em]">Our Products</span>
+            <span className="text-[#7d5a06] text-xs font-bold uppercase tracking-[0.2em]">Our Products</span>
             <h2 className="text-4xl md:text-5xl font-black text-foreground mt-2">
               FENCING SYSTEMS
               <br />
