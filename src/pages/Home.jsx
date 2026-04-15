@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <SEO
         title="Premium Fence Materials & Supplies"
-        description="Spartan Fencing Supplies — South Florida's most trusted fencing material source since 1989. Chain link, ornamental iron, vinyl, gates, and contractor supply programs."
+        description="Spartan Fencing Supplies — South Florida's most trusted fencing material source since 2023. Chain link, ornamental iron, vinyl, gates, and contractor supply programs."
         canonical="/"
         jsonLd={HOME_JSON_LD}
       />

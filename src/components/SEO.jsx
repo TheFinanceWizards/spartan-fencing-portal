@@ -14,7 +14,7 @@ const OG_IMAGE  = `${SITE_URL}/images/chain-link.webp`;
  * @param {object}  jsonLd       Additional JSON-LD object to merge (optional)
  */
 export default function SEO({ title, description, canonical = "/", ogImage = OG_IMAGE, jsonLd }) {
-  const fullTitle    = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Premium Fence Materials Since 1989`;
+  const fullTitle    = title ? `${title} | ${SITE_NAME}` : `${SITE_NAME} | Premium Fence Materials Since 2023`;
   const canonicalUrl = `${SITE_URL}${canonical}`;
 
   // Base LocalBusiness schema — present on every page
@@ -25,10 +25,10 @@ export default function SEO({ title, description, canonical = "/", ogImage = OG_
     "url": SITE_URL,
     "logo": `${SITE_URL}/images/logo.webp`,
     "image": OG_IMAGE,
-    "description": "Premium fencing materials and supplies for contractors, builders, and property owners in South Florida. Chain link, ornamental iron, vinyl, gates, and hardware since 1989.",
+    "description": "Premium fencing materials and supplies for contractors, builders, and property owners in South Florida. Chain link, ornamental iron, vinyl, gates, and hardware since 2023.",
     "telephone": "+18005551234",
     "email": "sales@spartanfencing.com",
-    "foundingDate": "1989",
+    "foundingDate": "2023",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "1200 Industrial Blvd",

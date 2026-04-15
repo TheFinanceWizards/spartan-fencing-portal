@@ -8,7 +8,7 @@ import SEO from "@/components/SEO";
 const VALUES = [
   { title: "Quality Without Compromise", body: "Every product we stock is vetted against industry specifications. If it doesn't meet the standard, it doesn't go on our shelf." },
   { title: "Service That Performs", body: "Our team is made up of people who've been in the field. We understand what contractors need and we deliver it without the runaround." },
-  { title: "Reliability You Can Schedule Around", body: "98% on-time delivery isn't a marketing claim — it's a track record built over 35 years of keeping our word." },
+  { title: "Reliability You Can Schedule Around", body: "98% on-time delivery isn't a marketing claim — it's a track record built since 2023 of keeping our word." },
   { title: "Partnership Over Transaction", body: "Our best clients aren't just customers, they're long-term partners. We invest in those relationships with competitive pricing, flexible terms, and real support." },
 ];
 
@@ -17,11 +17,11 @@ const ABOUT_JSON_LD = {
   "@type": "AboutPage",
   "url": "https://spartan-fencing-portal.vercel.app/about",
   "name": "About Spartan Fencing Supplies",
-  "description": "Founded in 1989, Spartan Fencing Supplies has grown into one of South Florida's most trusted fencing supply operations — serving contractors and property owners for over 35 years.",
+  "description": "Founded in 2023, Spartan Fencing Supplies is one of South Florida's most trusted fencing supply operations — serving contractors and property owners with quality materials at honest prices.",
   "mainEntity": {
     "@type": "HomeAndConstructionBusiness",
     "name": "Spartan Fencing Supplies",
-    "foundingDate": "1989",
+    "foundingDate": "2023",
     "numberOfEmployees": { "@type": "QuantitativeValue", "value": "25" },
     "slogan": "Quality you can trust, prices that compete."
   }
@@ -31,8 +31,8 @@ export default function About() {
   return (
     <div className="pt-20">
       <SEO
-        title="About Us — South Florida's Fencing Supply Leader Since 1989"
-        description="Founded in 1989, Spartan Fencing Supplies has served South Florida's contractors and property owners for over 35 years with quality materials, honest pricing, and 98% on-time delivery."
+        title="About Us — South Florida's Fencing Supply Leader Since 2023"
+        description="Founded in 2023, Spartan Fencing Supplies serves South Florida's contractors and property owners with quality fencing materials, honest pricing, and 98% on-time delivery."
         canonical="/about"
         ogImage="https://spartan-fencing-portal.vercel.app/images/gates-frames.webp"
         jsonLd={ABOUT_JSON_LD}
@@ -56,7 +56,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
-              <span className="text-[#7d5a06] text-xs font-bold uppercase tracking-[0.2em]">Since 1989</span>
+              <span className="text-[#7d5a06] text-xs font-bold uppercase tracking-[0.2em]">Since 2023</span>
               <h2 className="text-4xl font-black text-foreground mt-2 mb-6">
                 BUILT ON THE BELIEF
                 <br />
@@ -64,13 +64,13 @@ export default function About() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  Spartan Fencing Supplies was founded in 1989 with a single goal: give fence
+                  Spartan Fencing Supplies was founded in 2023 with a single goal: give fence
                   contractors in South Florida a reliable source for quality materials at honest prices.
                   In an industry where substitutions and delays were the norm, we built our name by
                   doing exactly what we said we'd do.
                 </p>
                 <p>
-                  Over three decades later, we've grown from a small distributor to one of the region's
+                  Since our founding in 2023, we've grown from a small distributor to one of the region's
                   most trusted fencing supply operations — stocking everything from residential chain link
                   to industrial gate systems, custom fabrication, and contractor support programs.
                 </p>

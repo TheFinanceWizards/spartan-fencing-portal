@@ -24,7 +24,7 @@ export default function HeroSection() {
             transition={{ duration: 0.6 }}
           >
             <span className="inline-block text-primary text-xs font-bold uppercase tracking-[0.2em] mb-6 border border-primary/30 px-3 py-1 rounded-sm">
-              Serving Professionals Since 1989
+              Serving Professionals Since 2023
             </span>
 
             <h1 className="text-5xl md:text-7xl font-black text-white leading-[0.9] mb-6">
@@ -64,7 +64,7 @@ export default function HeroSection() {
             {[
               { icon: Shield, text: "ASTM F668 Certified Materials" },
               { icon: Truck, text: "Regional Fleet Delivery" },
-              { icon: Award, text: "35+ Years of Excellence" },
+              { icon: Award, text: "2+ Years of Excellence" },
             ].map(({ icon: Icon, text }) => (
               <div key={text} className="flex items-center gap-2 text-white/50">
                 <Icon className="w-4 h-4 text-primary" />

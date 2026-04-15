@@ -10,8 +10,8 @@ const REASONS = [
   },
   {
     icon: Clock,
-    title: "35+ Years Experience",
-    description: "Decades of expertise mean we know what works — and we help you get it right the first time."
+    title: "Industry Experience",
+    description: "Deep expertise mean we know what works — and we help you get it right the first time."
   },
   {
     icon: Truck,
@@ -52,7 +52,7 @@ export default function WhyChooseUs() {
             </h2>
             <p className="text-white/60 leading-relaxed text-lg mb-8">
               We built our reputation on one principle: supply what you promise, when you promise it.
-              Over three decades, that commitment has made Spartan the go-to source for
+              Since 2023, that commitment has made Spartan the go-to source for
               fence contractors across the region.
             </p>
             <div className="flex flex-col gap-3">

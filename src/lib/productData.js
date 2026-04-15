@@ -119,7 +119,7 @@ export const SERVICES = [
 ];
 
 export const STATS = [
-  { value: "35+", label: "Years in Business" },
+  { value: "2+", label: "Years in Business" },
   { value: "12,000+", label: "Projects Supplied" },
   { value: "500+", label: "Contractor Partners" },
   { value: "98%", label: "On-Time Delivery" }

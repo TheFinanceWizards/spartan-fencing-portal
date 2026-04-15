@@ -95,7 +95,7 @@ export default function Footer() {
             © {new Date().getFullYear()} Spartan Fencing Supplies. All rights reserved.
           </p>
           <p className="text-xs text-background/60">
-            Serving contractors & property owners since 1989
+            Serving contractors & property owners since 2023
           </p>
         </div>
       </div>
