@@ -2,6 +2,7 @@ import { Toaster } from "@/components/ui/toaster"
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import SiteLayout from './components/layout/SiteLayout';
+import ScrollToTop from './components/ScrollToTop';
 import Home from './pages/Home';
 import Products from './pages/Products';
 import Services from './pages/Services';
@@ -11,6 +12,7 @@ import Contact from './pages/Contact';
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <Routes>
         <Route element={<SiteLayout />}>
           <Route path="/" element={<Home />} />
