@@ -37,7 +37,7 @@ export default function HeroSection() {
 
             <p className="text-lg text-white/60 leading-relaxed mb-10 max-w-xl">
               Premium fencing materials for contractors and property owners who demand quality.
-              Chain link, ornamental iron, vinyl, wood — engineered to last.
+              Chain link, ornamental iron, vinyl, wood hardware — engineered to last.
             </p>
 
             <div className="flex flex-wrap gap-4">

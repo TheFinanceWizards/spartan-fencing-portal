@@ -28,11 +28,11 @@ export const PRODUCT_CATEGORIES = [
   },
   {
     id: "wood-fencing",
-    name: "Wood Fencing & Hardware",
-    shortName: "Wood Fencing",
+    name: "Wood Fence Hardware & Accessories",
+    shortName: "Wood Hardware",
     image: "https://media.base44.com/images/public/69bd8c7f45d3f9291e5cc858/11ac3d8a9_generated_a4abd5db.png",
-    description: "There's a warmth to wood that no other fencing material can replicate. Our pressure-treated pine, Western red cedar, and redwood boards are kiln-dried and graded for structural integrity, giving you a fence that weathers beautifully and lasts decades. Paired with our premium stainless steel and galvanized hardware, every Spartan wood fence is built to endure.",
-    features: ["Pressure-treated & cedar options", "Kiln-dried for stability", "Dog-ear, flat top, & lattice styles", "Premium hardware included"],
+    description: "Build wood fences that last with our comprehensive selection of fence hardware and accessories. From post caps and rail brackets to gate hinges, carriage bolts, and lag screws — every component is available in galvanized steel, stainless steel, and aluminum to ensure corrosion resistance and long-term structural integrity for any wood fence installation.",
+    features: ["Post caps & base plates", "Gate hinges & heavy-duty latches", "Carriage bolts, lag screws & fasteners", "Rail brackets & tension hardware"],
     icon: "TreePine"
   },
   {

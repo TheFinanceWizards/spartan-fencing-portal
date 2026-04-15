@@ -10,7 +10,7 @@ const PRODUCT_OPTIONS = [
   "Chain Link Fencing",
   "Privacy & Sight Block Screens",
   "Ornamental Iron & Aluminum",
-  "Wood Fencing & Hardware",
+  "Wood Fence Hardware & Accessories",
   "Vinyl & PVC Fencing",
   "Pipes & Tubes",
   "Gates & Gate Frames",

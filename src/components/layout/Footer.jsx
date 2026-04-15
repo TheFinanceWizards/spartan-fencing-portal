@@ -26,7 +26,7 @@ export default function Footer() {
               Products
             </h4>
             <ul className="space-y-2.5">
-              {["Chain Link Fencing", "Ornamental Iron", "Wood Fencing", "Vinyl Fencing", "Gates & Frames", "Hardware & Fittings"].map((item) => (
+              {["Chain Link Fencing", "Ornamental Iron", "Wood Hardware", "Vinyl Fencing", "Gates & Frames", "Hardware & Fittings"].map((item) => (
                 <li key={item}>
                   <Link to="/products" className="text-sm text-background/50 hover:text-primary transition-colors">
                     {item}
