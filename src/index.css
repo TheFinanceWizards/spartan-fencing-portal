@@ -11,15 +11,15 @@
 
     /* Spartan Brand: warm off-white bg, deep charcoal dark, gold primary */
     --background: 40 20% 97%;
-    --foreground: 220 25% 12%;
+    --foreground: 240 3% 12%;
     --card: 0 0% 100%;
-    --card-foreground: 220 25% 12%;
+    --card-foreground: 240 3% 12%;
     --popover: 0 0% 100%;
-    --popover-foreground: 220 25% 12%;
+    --popover-foreground: 240 3% 12%;
     --primary: 42 62% 48%;          /* Spartan gold */
     --primary-foreground: 0 0% 100%;
     --secondary: 40 15% 92%;
-    --secondary-foreground: 220 25% 15%;
+    --secondary-foreground: 240 3% 15%;
     --muted: 40 10% 94%;
     --muted-foreground: 220 10% 45%;
     --accent: 42 55% 92%;
@@ -33,16 +33,16 @@
   }
 
   .dark {
-    --background: 220 25% 8%;
+    --background: 240 3% 11%;
     --foreground: 40 15% 95%;
-    --card: 220 25% 11%;
+    --card: 240 3% 13%;
     --card-foreground: 40 15% 95%;
     --primary: 42 62% 52%;
     --primary-foreground: 0 0% 100%;
-    --muted: 220 15% 16%;
-    --muted-foreground: 220 10% 55%;
-    --border: 220 15% 18%;
-    --input: 220 15% 18%;
+    --muted: 240 3% 16%;
+    --muted-foreground: 240 3% 55%;
+    --border: 240 3% 18%;
+    --input: 240 3% 18%;
     --ring: 42 62% 52%;
   }
 }

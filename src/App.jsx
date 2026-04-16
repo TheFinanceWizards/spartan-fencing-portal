@@ -6,11 +6,12 @@ import SiteLayout from './components/layout/SiteLayout';
 import ScrollToTop from './components/ScrollToTop';
 
 // Route-level code splitting — each page loads only when navigated to
-const Home     = lazy(() => import('./pages/Home'));
-const Products = lazy(() => import('./pages/Products'));
-const Services = lazy(() => import('./pages/Services'));
-const About    = lazy(() => import('./pages/About'));
-const Contact  = lazy(() => import('./pages/Contact'));
+const Home          = lazy(() => import('./pages/Home'));
+const Products      = lazy(() => import('./pages/Products'));
+const ProductDetail = lazy(() => import('./pages/ProductDetail'));
+const Services      = lazy(() => import('./pages/Services'));
+const About         = lazy(() => import('./pages/About'));
+const Contact       = lazy(() => import('./pages/Contact'));
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route element={<SiteLayout />}>
             <Route path="/" element={<Home />} />
             <Route path="/products" element={<Products />} />
+            <Route path="/products/:id" element={<ProductDetail />} />
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />

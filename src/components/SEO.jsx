@@ -26,34 +26,34 @@ export default function SEO({ title, description, canonical = "/", ogImage = OG_
     "logo": `${SITE_URL}/images/logo.webp`,
     "image": OG_IMAGE,
     "description": "Premium fencing materials and supplies for contractors, builders, and property owners in South Florida. Chain link, ornamental iron, vinyl, gates, and hardware since 2023.",
-    "telephone": "+18005551234",
-    "email": "sales@spartanfencing.com",
+    "telephone": "+19543169889",
+    "email": "info@spartanfencingsupplies.com",
     "foundingDate": "2023",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1200 Industrial Blvd",
-      "addressLocality": "Miami",
+      "streetAddress": "1531 S State Road 7",
+      "addressLocality": "Fort Lauderdale",
       "addressRegion": "FL",
-      "postalCode": "33125",
+      "postalCode": "33317",
       "addressCountry": "US"
     },
     "geo": {
       "@type": "GeoCoordinates",
-      "latitude": 25.7905,
-      "longitude": -80.2310
+      "latitude": 26.0872,
+      "longitude": -80.1509
     },
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
-        "opens": "07:00",
-        "closes": "17:00"
+        "opens": "07:30",
+        "closes": "15:30"
       },
       {
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Saturday"],
-        "opens": "08:00",
-        "closes": "12:00"
+        "opens": "07:30",
+        "closes": "12:30"
       }
     ],
     "priceRange": "$$",

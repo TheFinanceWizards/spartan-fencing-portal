@@ -37,7 +37,7 @@ const REASONS = [
 
 export default function WhyChooseUs() {
   return (
-    <section className="py-24 bg-[#1a1e2a]">
+    <section className="py-24 bg-[#1c1c1e]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left copy */}

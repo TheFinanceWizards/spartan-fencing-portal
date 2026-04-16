@@ -38,7 +38,7 @@ export default function About() {
         jsonLd={ABOUT_JSON_LD}
       />
       {/* Header */}
-      <section className="bg-[#1a1e2a] py-20">
+      <section className="bg-[#1c1c1e] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-primary text-xs font-bold uppercase tracking-[0.2em]">Our Story</span>
           <h1 className="text-5xl md:text-6xl font-black text-white mt-2 mb-4">
@@ -113,7 +113,7 @@ export default function About() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-[#1a1e2a]">
+      <section className="py-20 bg-[#1c1c1e]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-14">
             <span className="text-primary text-xs font-bold uppercase tracking-[0.2em]">What We Stand For</span>

@@ -28,8 +28,8 @@ export default function Navbar() {
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       scrolled
-        ? "bg-[#1a1e2a]/97 backdrop-blur-md shadow-sm border-b border-white/10"
-        : "bg-[#1a1e2a]/80 backdrop-blur-sm"
+        ? "bg-[#1c1c1e]/97 backdrop-blur-md shadow-sm border-b border-white/10"
+        : "bg-[#1c1c1e]/80 backdrop-blur-sm"
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
@@ -65,11 +65,11 @@ export default function Navbar() {
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
             <a
-              href="tel:+18005551234"
+              href="tel:+19543169889"
               className="flex items-center gap-1.5 text-sm text-white/60 hover:text-white transition-colors"
             >
               <Phone className="w-3.5 h-3.5" />
-              (800) 555-1234
+              (954) 316-9889
             </a>
             <Link to="/contact" className="spartan-cta !py-2 !px-4 !text-xs">
               Get a Quote
@@ -85,7 +85,7 @@ export default function Navbar() {
             </SheetTrigger>
             <SheetContent side="right" className="w-72 p-0">
               <div className="flex flex-col h-full">
-                <div className="p-6 border-b border-border bg-[#1a1e2a]">
+                <div className="p-6 border-b border-border bg-[#1c1c1e]">
                   <img
                     src="/images/logo.webp"
                     alt="Spartan Fencing Supplies"
@@ -110,11 +110,11 @@ export default function Navbar() {
                 </nav>
                 <div className="p-4 border-t border-border space-y-3">
                   <a
-                    href="tel:+18005551234"
+                    href="tel:+19543169889"
                     className="flex items-center gap-2 text-sm text-muted-foreground"
                   >
                     <Phone className="w-4 h-4" />
-                    (800) 555-1234
+                    (954) 316-9889
                   </a>
                   <Link to="/contact" onClick={() => setOpen(false)}>
                     <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground">

@@ -66,24 +66,24 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-start gap-2.5">
                 <Phone className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                <span className="text-sm text-background/60">(800) 555-1234</span>
+                <span className="text-sm text-background/60">(954) 316-9889</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Mail className="w-4 h-4 text-primary mt-0.5 shrink-0" />
-                <span className="text-sm text-background/60">sales@spartanfencing.com</span>
+                <span className="text-sm text-background/60">info@spartanfencingsupplies.com</span>
               </li>
               <li className="flex items-start gap-2.5">
                 <MapPin className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <span className="text-sm text-background/60">
-                  1200 Industrial Blvd<br />
-                  Miami, FL 33125
+                  1531 S State Road 7<br />
+                  Fort Lauderdale, FL 33317
                 </span>
               </li>
               <li className="flex items-start gap-2.5">
                 <Clock className="w-4 h-4 text-primary mt-0.5 shrink-0" />
                 <span className="text-sm text-background/60">
-                  Mon–Fri: 7am–5pm<br />
-                  Sat: 8am–12pm
+                  Mon–Fri: 7:30am–3:30pm<br />
+                  Sat: 7:30am–12:30pm
                 </span>
               </li>
             </ul>

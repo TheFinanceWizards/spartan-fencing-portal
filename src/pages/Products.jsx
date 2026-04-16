@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
 import { PRODUCT_CATEGORIES } from "@/lib/productData";
 import ProductCard from "@/components/products/ProductCard";
@@ -21,13 +21,6 @@ const PRODUCTS_JSON_LD = {
 };
 
 export default function Products() {
-  const [search, setSearch] = useState("");
-
-  const filtered = PRODUCT_CATEGORIES.filter((p) =>
-    p.name.toLowerCase().includes(search.toLowerCase()) ||
-    p.description.toLowerCase().includes(search.toLowerCase())
-  );
-
   return (
     <div className="pt-20">
       <SEO
@@ -37,7 +30,7 @@ export default function Products() {
         jsonLd={PRODUCTS_JSON_LD}
       />
       {/* Page Header */}
-      <section className="bg-[#1a1e2a] py-20">
+      <section className="bg-[#1c1c1e] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-primary text-xs font-bold uppercase tracking-[0.2em]">Full Inventory</span>
           <h1 className="text-5xl md:text-6xl font-black text-white mt-2 mb-4">
@@ -50,40 +43,22 @@ export default function Products() {
         </div>
       </section>
 
-      {/* Search + Grid */}
+      {/* Grid */}
       <section className="py-16 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Search */}
-          <div className="mb-10">
-            <input
-              type="text"
-              placeholder="Search products..."
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-              className="w-full max-w-md border border-input bg-card rounded-lg px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-ring placeholder:text-muted-foreground"
-            />
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {PRODUCT_CATEGORIES.map((product, i) => (
+              <motion.div
+                key={product.id}
+                className="h-full"
+                initial={{ opacity: 0, y: 16 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.05 }}
+              >
+                <ProductCard product={product} />
+              </motion.div>
+            ))}
           </div>
-
-          {/* Grid */}
-          {filtered.length > 0 ? (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {filtered.map((product, i) => (
-                <motion.div
-                  key={product.id}
-                  initial={{ opacity: 0, y: 16 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: i * 0.05 }}
-                >
-                  <ProductCard product={product} />
-                </motion.div>
-              ))}
-            </div>
-          ) : (
-            <div className="text-center py-20 text-muted-foreground">
-              <p className="text-lg font-semibold">No products found</p>
-              <p className="text-sm mt-1">Try a different search term</p>
-            </div>
-          )}
         </div>
       </section>
 

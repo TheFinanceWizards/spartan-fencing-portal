@@ -4,7 +4,7 @@ import { ArrowRight, Phone } from "lucide-react";
 
 export default function CTASection() {
   return (
-    <section className="py-24 bg-[#1a1e2a] relative overflow-hidden">
+    <section className="py-24 bg-[#1c1c1e] relative overflow-hidden">
       {/* Decorative gold accent */}
       <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent" />
 
@@ -25,11 +25,11 @@ export default function CTASection() {
             <ArrowRight className="w-4 h-4" />
           </Link>
           <a
-            href="tel:+18005551234"
+            href="tel:+19543169889"
             className="inline-flex items-center gap-2 text-white/60 hover:text-white text-sm font-semibold transition-colors"
           >
             <Phone className="w-4 h-4 text-primary" />
-            Or call (800) 555-1234
+            Or call (954) 316-9889
           </a>
         </div>
       </div>

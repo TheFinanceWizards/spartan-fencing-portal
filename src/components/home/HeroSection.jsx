@@ -5,7 +5,7 @@ import { ArrowRight, Shield, Truck, Award } from "lucide-react";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#1a1e2a]">
+    <section className="relative min-h-screen flex items-center overflow-hidden bg-[#1c1c1e]">
       {/* Background image overlay */}
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
@@ -14,7 +14,7 @@ export default function HeroSection() {
         }}
       />
       {/* Gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1a1e2a] via-[#1a1e2a]/90 to-[#1a1e2a]/60" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#1c1c1e] via-[#1c1c1e]/90 to-[#1c1c1e]/60" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 pt-40">
         <div className="max-w-3xl">

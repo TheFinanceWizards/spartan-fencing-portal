@@ -12,24 +12,24 @@ const CONTACT_JSON_LD = {
   "mainEntity": {
     "@type": "HomeAndConstructionBusiness",
     "name": "Spartan Fencing Supplies",
-    "telephone": "+18005551234",
-    "email": "sales@spartanfencing.com",
+    "telephone": "+19543169889",
+    "email": "info@spartanfencingsupplies.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "1200 Industrial Blvd",
-      "addressLocality": "Miami",
+      "streetAddress": "1531 S State Road 7",
+      "addressLocality": "Fort Lauderdale",
       "addressRegion": "FL",
-      "postalCode": "33125",
+      "postalCode": "33317",
       "addressCountry": "US"
     }
   }
 };
 
 const CONTACT_INFO = [
-  { icon: Phone, label: "Phone", value: "(800) 555-1234", href: "tel:+18005551234" },
-  { icon: Mail, label: "Email", value: "sales@spartanfencing.com", href: "mailto:sales@spartanfencing.com" },
-  { icon: MapPin, label: "Location", value: "1200 Industrial Blvd\nMiami, FL 33125", href: null },
-  { icon: Clock, label: "Hours", value: "Mon–Fri: 7am–5pm\nSat: 8am–12pm", href: null },
+  { icon: Phone, label: "Phone", value: "(954) 316-9889", href: "tel:+19543169889" },
+  { icon: Mail, label: "Email", value: "info@spartanfencingsupplies.com", href: "mailto:info@spartanfencingsupplies.com" },
+  { icon: MapPin, label: "Location", value: "1531 S State Road 7\nFort Lauderdale, FL 33317", href: null },
+  { icon: Clock, label: "Hours", value: "Mon–Fri: 7:30am–3:30pm\nSat: 7:30am–12:30pm", href: null },
 ];
 
 export default function Contact() {
@@ -37,12 +37,12 @@ export default function Contact() {
     <div className="pt-20">
       <SEO
         title="Contact Us & Get a Quote"
-        description="Request a quote or reach out to Spartan Fencing Supplies. Call (800) 555-1234, email sales@spartanfencing.com, or fill out our quick quote form. Miami, FL."
+        description="Request a quote or reach out to Spartan Fencing Supplies. Call (954) 316-9889, email info@spartanfencingsupplies.com, or fill out our quick quote form. Fort Lauderdale, FL."
         canonical="/contact"
         jsonLd={CONTACT_JSON_LD}
       />
       {/* Header */}
-      <section className="bg-[#1a1e2a] py-20">
+      <section className="bg-[#1c1c1e] py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <span className="text-primary text-xs font-bold uppercase tracking-[0.2em]">Get in Touch</span>
           <h1 className="text-5xl md:text-6xl font-black text-white mt-2 mb-4">
@@ -93,7 +93,7 @@ export default function Contact() {
               <div className="rounded-xl overflow-hidden border border-border h-48 bg-muted flex items-center justify-center">
                 <div className="text-center text-muted-foreground">
                   <MapPin className="w-8 h-8 mx-auto mb-2 text-primary/40" />
-                  <p className="text-xs">1200 Industrial Blvd<br />Miami, FL 33125</p>
+                  <p className="text-xs">1531 S State Road 7<br />Fort Lauderdale, FL 33317</p>
                 </div>
               </div>
             </div>
