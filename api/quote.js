@@ -16,7 +16,7 @@ export default async function handler(req, res) {
   try {
     await resend.emails.send({
       from: 'Spartan Fencing Supplies <noreply@spartanfencingsupplies.com>',
-      to: 'spartanfencingsuppliesllc@gmail.com',
+      to: ['spartanfencingsuppliesllc@gmail.com', 'info@spartanfencingsupplies.com'],
       replyTo: email,
       subject: `New Quote Request — ${product || 'General'} — ${name}`,
       html: `
