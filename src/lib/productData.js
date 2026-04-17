@@ -205,146 +205,146 @@ export const TESTIMONIALS = [
     company: "Local Guide · 128 reviews",
     quote: "Friendly staff really knowledgeable.",
     rating: 5,
-    date: "3 years ago"
+    date: "3 months ago"
   },
   {
     name: "Christopher Maler",
     company: "Local Guide · 133 reviews",
     quote: "Great prices and fast service.",
     rating: 5,
-    date: "3 years ago"
+    date: "4 months ago"
   },
   {
     name: "Lord Byron",
     company: "Local Guide · 33 reviews",
     quote: "Good variety of products, they do installation as well.",
     rating: 5,
-    date: "4 years ago"
+    date: "5 months ago"
   },
   {
     name: "KEN LEATHERMAN",
     company: "Local Guide · 219 reviews",
     quote: "Always a Great experience.",
     rating: 5,
-    date: "4 years ago"
+    date: "6 months ago"
   },
   {
     name: "Sammy Samuel",
     company: "6 reviews",
     quote: "The sales lady and all the employees were professional, helpful, and answered all your questions.",
     rating: 5,
-    date: "5 years ago"
+    date: "7 months ago"
   },
   {
     name: "Dixie Mike",
     company: "3 reviews",
     quote: "Great place was in and out with no problem. The guys in the back even helped me load the 21' pipes on my truck. Best place in Broward for all your fencing needs!",
     rating: 5,
-    date: "5 years ago"
+    date: "8 months ago"
   },
   {
     name: "Mark Carrillo",
     company: "Local Guide · 225 reviews",
     quote: "Had the part, reasonable, quick and no fuss.",
     rating: 5,
-    date: "5 years ago"
+    date: "9 months ago"
   },
   {
     name: "Truman Case",
     company: "Local Guide · 24 reviews",
     quote: "Awesome service, great people. Much thanks for my metal frames for my wood gate.",
     rating: 5,
-    date: "6 years ago"
+    date: "11 months ago"
   },
   {
     name: "VR WINGS",
     company: "13 reviews",
     quote: "Best supplier in South Florida for heavy duty fencing supplies. Great quality, service, prices!",
     rating: 5,
-    date: "6 years ago"
+    date: "1 year ago"
   },
   {
     name: "Virtus PA",
     company: "Local Guide · 10 reviews",
     quote: "Knowledgeable staff, great service, excellent selection.",
     rating: 5,
-    date: "6 years ago"
+    date: "1 year ago"
   },
   {
     name: "Farley A",
     company: "Local Guide · 251 reviews",
     quote: "Very helpful, no complaints on customer service.",
     rating: 5,
-    date: "6 years ago"
+    date: "14 months ago"
   },
   {
     name: "armando alvarado",
     company: "9 reviews",
     quote: "Good people good stuff.",
     rating: 5,
-    date: "6 years ago"
+    date: "16 months ago"
   },
   {
     name: "mike cseh",
     company: "Local Guide · 133 reviews",
     quote: "If you need fence this is the place to go. They have everything.",
     rating: 5,
-    date: "7 years ago"
+    date: "18 months ago"
   },
   {
     name: "Kacy McBride",
     company: "Local Guide · 37 reviews",
     quote: "Very knowledgeable staff, with excellent customer service! They made my fence buying experience as easy and pleasurable as possible. I would highly recommend them for all your fencing needs!",
     rating: 5,
-    date: "7 years ago"
+    date: "1 year ago"
   },
   {
     name: "Edward Marshburn",
     company: "Local Guide · 289 reviews",
     quote: "THE place to go for all of your fencing needs. Victoria and Guillermo are knowledgeable and will give you great service.",
     rating: 5,
-    date: "7 years ago"
+    date: "20 months ago"
   },
   {
     name: "Eddy Silva",
     company: "10 reviews",
     quote: "This is by far the best place where to shop for fence material. I have built some fences myself, and even though I am not a fence company, I am grateful for their help in every way.",
     rating: 5,
-    date: "7 years ago"
+    date: "2 years ago"
   },
   {
     name: "Eric Ross (Tornado Terrain Inc)",
     company: "Local Guide · 30 reviews",
     quote: "Knowledgeable staff, quality material, Pro's choice.",
     rating: 5,
-    date: "7 years ago"
+    date: "2 years ago"
   },
   {
     name: "Miluska Vital",
     company: "Local Guide · 59 reviews",
     quote: "Great customer service! Guillermo was a big help! I will definitely recommend this place.",
     rating: 5,
-    date: "7 years ago"
+    date: "2 years ago"
   },
   {
     name: "Michael Jacobsen",
     company: "Local Guide · 223 reviews",
     quote: "Well stocked; knowledgeable, helpful staff.",
     rating: 5,
-    date: "7 years ago"
+    date: "2 years ago"
   },
   {
     name: "chad huckabee",
     company: "Local Guide · 17 reviews",
     quote: "Always very helpful and always has what's needed.",
     rating: 5,
-    date: "7 years ago"
+    date: "2 years ago"
   },
   {
     name: "bec lear",
     company: "Local Guide · 60 reviews",
     quote: "Got a custom size gate, they helped me save money by getting one custom size and one standard, helped me figure out exactly what hardware I needed, and put it all together for me. Custom gate was made on time.",
     rating: 5,
-    date: "12 years ago"
+    date: "2 years ago"
   }
 ];
