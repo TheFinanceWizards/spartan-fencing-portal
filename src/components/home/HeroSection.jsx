@@ -10,7 +10,7 @@ export default function HeroSection() {
       <div
         className="absolute inset-0 bg-cover bg-center opacity-20"
         style={{
-          backgroundImage: `url('/images/chain-link.webp')`
+          backgroundImage: `url('https://media.base44.com/images/public/69bd8c7f45d3f9291e5cc858/f6bd7ff9f_generated_cebf11f7.png')`
         }}
       />
       {/* Gradient overlay */}
