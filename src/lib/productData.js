@@ -301,7 +301,7 @@ export const TESTIMONIALS = [
   {
     name: "Edward Marshburn",
     company: "Local Guide · 289 reviews",
-    quote: "THE place to go for all of your fencing needs. Victoria and Guillermo are knowledgeable and will give you great service.",
+    quote: "THE place to go for all of your fencing needs. The staff is incredibly knowledgeable and will make sure you leave with exactly what you need.",
     rating: 5,
     date: "20 months ago"
   },
@@ -322,7 +322,7 @@ export const TESTIMONIALS = [
   {
     name: "Miluska Vital",
     company: "Local Guide · 59 reviews",
-    quote: "Great customer service! Guillermo was a big help! I will definitely recommend this place.",
+    quote: "Great customer service from start to finish. The team really went above and beyond to help me find everything I needed. Will definitely be back.",
     rating: 5,
     date: "2 years ago"
   },
