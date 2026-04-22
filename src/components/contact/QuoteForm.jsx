@@ -141,7 +141,7 @@ export default function QuoteForm() {
       {/* SMS Consent Checkboxes — A2P Compliant */}
       <div className="space-y-4 pt-2 border-t border-border">
         <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wide">
-          Text Message Consent (Optional)
+          Text Message Consent
         </p>
 
         {/* Marketing SMS */}
@@ -165,7 +165,7 @@ export default function QuoteForm() {
           </div>
           <span className="text-xs text-muted-foreground leading-relaxed">
             I consent to receive <strong className="text-foreground/80">marketing text messages</strong> from
-            Spartan Fencing Supplies at the phone number provided. These may include promotions, special offers,
+            Spartan Fencing Supplies LLC at the phone number provided. These may include promotions, special offers,
             and product announcements. Frequency may vary. Message &amp; data rates may apply.
             Text <strong>HELP</strong> for assistance, reply <strong>STOP</strong> to opt out.
           </span>
@@ -192,7 +192,7 @@ export default function QuoteForm() {
           </div>
           <span className="text-xs text-muted-foreground leading-relaxed">
             I consent to receive <strong className="text-foreground/80">non-marketing text messages</strong> from
-            Spartan Fencing Supplies about my order updates, quote status, appointment reminders, and other
+            Spartan Fencing Supplies LLC about my order updates, quote status, appointment reminders, and other
             service notifications. Frequency may vary. Message &amp; data rates may apply.
             Text <strong>HELP</strong> for assistance, reply <strong>STOP</strong> to opt out.
           </span>
