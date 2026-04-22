@@ -7,7 +7,7 @@ export default async function handler(req, res) {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, company, email, phone, product, projectType, message } = req.body;
+  const { name, company, email, phone, product, projectType, message, smsMarketingConsent, smsTransactionalConsent } = req.body;
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Missing required fields' });
@@ -35,6 +35,8 @@ export default async function handler(req, res) {
               <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Phone</td><td style="padding: 8px 0; font-size: 14px;">${phone || '—'}</td></tr>
               <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Product</td><td style="padding: 8px 0; font-size: 14px;">${product || '—'}</td></tr>
               <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Project Type</td><td style="padding: 8px 0; font-size: 14px;">${projectType || '—'}</td></tr>
+              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">SMS Marketing</td><td style="padding: 8px 0; font-size: 14px;">${smsMarketingConsent ? '✅ Consented' : '❌ Not consented'}</td></tr>
+              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">SMS Transactional</td><td style="padding: 8px 0; font-size: 14px;">${smsTransactionalConsent ? '✅ Consented' : '❌ Not consented'}</td></tr>
             </table>
             <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 16px 0;" />
             <p style="color: #666; font-size: 13px; margin: 0 0 8px;">Project Details</p>

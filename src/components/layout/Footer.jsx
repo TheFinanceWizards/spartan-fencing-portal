@@ -94,9 +94,13 @@ export default function Footer() {
           <p className="text-xs text-background/60">
             © {new Date().getFullYear()} Spartan Fencing Supplies. All rights reserved.
           </p>
-          <p className="text-xs text-background/60">
-            Serving contractors & property owners since 2023
-          </p>
+          <div className="flex items-center gap-4">
+            <Link to="/privacy" className="text-xs text-background/50 hover:text-primary transition-colors">Privacy Policy</Link>
+            <span className="text-background/20 text-xs">|</span>
+            <Link to="/terms" className="text-xs text-background/50 hover:text-primary transition-colors">Terms of Service</Link>
+            <span className="text-background/20 text-xs">|</span>
+            <Link to="/contact" className="text-xs text-background/50 hover:text-primary transition-colors">Contact Us</Link>
+          </div>
         </div>
       </div>
     </footer>

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -26,10 +27,16 @@ export default function QuoteForm() {
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [form, setForm] = useState({
-    name: "", company: "", email: "", phone: "", product: "", projectType: "", message: ""
+    name: "", company: "", email: "", phone: "",
+    product: "", projectType: "", message: "",
+    smsMarketingConsent: false,
+    smsTransactionalConsent: false,
   });
 
-  const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+  const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setForm({ ...form, [name]: type === "checkbox" ? checked : value });
+  };
   const handleSelect = (value) => setForm({ ...form, product: value });
 
   const handleSubmit = async (e) => {
@@ -63,7 +70,10 @@ export default function QuoteForm() {
           </p>
         </div>
         <button
-          onClick={() => { setSubmitted(false); setForm({ name: "", company: "", email: "", phone: "", product: "", projectType: "", message: "" }); }}
+          onClick={() => {
+            setSubmitted(false);
+            setForm({ name: "", company: "", email: "", phone: "", product: "", projectType: "", message: "", smsMarketingConsent: false, smsTransactionalConsent: false });
+          }}
           className="text-sm text-primary hover:text-primary/80 font-semibold transition-colors"
         >
           Submit another request
@@ -126,6 +136,75 @@ export default function QuoteForm() {
           rows={5}
           placeholder="Tell us about your project — dimensions, quantities, timeline, any special requirements..."
         />
+      </div>
+
+      {/* SMS Consent Checkboxes — A2P Compliant */}
+      <div className="space-y-4 pt-2 border-t border-border">
+        <p className="text-xs text-muted-foreground font-semibold uppercase tracking-wide">
+          Text Message Consent (Optional)
+        </p>
+
+        {/* Marketing SMS */}
+        <label className="flex items-start gap-3 cursor-pointer group">
+          <div className="relative flex-shrink-0 mt-0.5">
+            <input
+              type="checkbox"
+              name="smsMarketingConsent"
+              id="smsMarketingConsent"
+              checked={form.smsMarketingConsent}
+              onChange={handleChange}
+              className="sr-only peer"
+            />
+            <div className="w-5 h-5 rounded border-2 border-border peer-checked:bg-primary peer-checked:border-primary group-hover:border-primary/60 transition-colors flex items-center justify-center">
+              {form.smsMarketingConsent && (
+                <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              )}
+            </div>
+          </div>
+          <span className="text-xs text-muted-foreground leading-relaxed">
+            I consent to receive <strong className="text-foreground/80">marketing text messages</strong> from
+            Spartan Fencing Supplies at the phone number provided. These may include promotions, special offers,
+            and product announcements. Frequency may vary. Message &amp; data rates may apply.
+            Text <strong>HELP</strong> for assistance, reply <strong>STOP</strong> to opt out.
+          </span>
+        </label>
+
+        {/* Transactional SMS */}
+        <label className="flex items-start gap-3 cursor-pointer group">
+          <div className="relative flex-shrink-0 mt-0.5">
+            <input
+              type="checkbox"
+              name="smsTransactionalConsent"
+              id="smsTransactionalConsent"
+              checked={form.smsTransactionalConsent}
+              onChange={handleChange}
+              className="sr-only peer"
+            />
+            <div className="w-5 h-5 rounded border-2 border-border peer-checked:bg-primary peer-checked:border-primary group-hover:border-primary/60 transition-colors flex items-center justify-center">
+              {form.smsTransactionalConsent && (
+                <svg className="w-3 h-3 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M5 13l4 4L19 7" />
+                </svg>
+              )}
+            </div>
+          </div>
+          <span className="text-xs text-muted-foreground leading-relaxed">
+            I consent to receive <strong className="text-foreground/80">non-marketing text messages</strong> from
+            Spartan Fencing Supplies about my order updates, quote status, appointment reminders, and other
+            service notifications. Frequency may vary. Message &amp; data rates may apply.
+            Text <strong>HELP</strong> for assistance, reply <strong>STOP</strong> to opt out.
+          </span>
+        </label>
+
+        <p className="text-xs text-muted-foreground">
+          By submitting this form you agree to our{" "}
+          <Link to="/terms" className="text-primary hover:underline font-medium">Terms of Service</Link>
+          {" "}&amp;{" "}
+          <Link to="/privacy" className="text-primary hover:underline font-medium">Privacy Policy</Link>.
+          Consent to receive texts is not required to purchase from us.
+        </p>
       </div>
 
       <Button
