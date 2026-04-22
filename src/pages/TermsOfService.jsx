@@ -6,8 +6,9 @@ export default function TermsOfService() {
   return (
     <>
       <SEO
-        title="Terms of Service | Spartan Fencing Supplies"
+        title="Terms of Service"
         description="Terms of service for Spartan Fencing Supplies. Review the terms governing your use of our website and services."
+        canonical="/terms"
       />
 
       {/* Header */}

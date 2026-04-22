@@ -6,8 +6,9 @@ export default function PrivacyPolicy() {
   return (
     <>
       <SEO
-        title="Privacy Policy | Spartan Fencing Supplies"
+        title="Privacy Policy"
         description="Privacy policy for Spartan Fencing Supplies. Learn how we collect, use, and protect your personal information."
+        canonical="/privacy"
       />
 
       {/* Header */}
