@@ -34,7 +34,20 @@ export default function TermsOfService() {
           </div>
 
           <div>
-            <h2 className="text-xl font-black text-foreground uppercase mb-3">2. Products &amp; Services</h2>
+            <h2 className="text-xl font-black text-foreground uppercase mb-3">2. Eligibility &amp; Age Requirement</h2>
+            <p>
+              You must be at least <strong>18 years of age</strong> to access or use this Site, submit a quote
+              request, enter into any transaction with us, or provide consent to receive text message communications
+              from Spartan Fencing Supplies. By using the Site or submitting any form, you represent and warrant
+              that you are 18 years of age or older and have the legal capacity to enter into these Terms. We do
+              not knowingly collect information from or provide services to individuals under the age of 18. If we
+              become aware that an individual under 18 has provided us with personal information or SMS consent,
+              we will promptly delete that information and terminate any related communications.
+            </p>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-black text-foreground uppercase mb-3">3. Products &amp; Services</h2>
             <p>
               Spartan Fencing Supplies sells fencing materials, hardware, and related supplies to contractors,
               builders, and property owners. All product descriptions, pricing, and availability are subject to
@@ -44,7 +57,7 @@ export default function TermsOfService() {
           </div>
 
           <div>
-            <h2 className="text-xl font-black text-foreground uppercase mb-3">3. Quote Requests</h2>
+            <h2 className="text-xl font-black text-foreground uppercase mb-3">4. Quote Requests</h2>
             <p>
               Submitting a quote request through our website does not constitute a binding purchase order or
               guarantee of pricing. Quotes are estimates only and are valid for 30 days from the date issued
@@ -53,7 +66,7 @@ export default function TermsOfService() {
           </div>
 
           <div>
-            <h2 className="text-xl font-black text-foreground uppercase mb-3">4. SMS &amp; Text Message Program</h2>
+            <h2 className="text-xl font-black text-foreground uppercase mb-3">5. SMS &amp; Text Message Program</h2>
             <p>
               By providing your mobile phone number and checking the applicable consent box on our contact form,
               you agree to receive text messages from Spartan Fencing Supplies. Our SMS programs include:
@@ -85,7 +98,7 @@ export default function TermsOfService() {
           </div>
 
           <div>
-            <h2 className="text-xl font-black text-foreground uppercase mb-3">5. Intellectual Property</h2>
+            <h2 className="text-xl font-black text-foreground uppercase mb-3">6. Intellectual Property</h2>
             <p>
               All content on this Site — including text, images, logos, graphics, and product descriptions —
               is the property of Spartan Fencing Supplies LLC or its content suppliers and is protected by
@@ -95,7 +108,7 @@ export default function TermsOfService() {
           </div>
 
           <div>
-            <h2 className="text-xl font-black text-foreground uppercase mb-3">6. Disclaimer of Warranties</h2>
+            <h2 className="text-xl font-black text-foreground uppercase mb-3">7. Disclaimer of Warranties</h2>
             <p>
               THE SITE AND ALL INFORMATION, CONTENT, AND SERVICES PROVIDED THROUGH IT ARE PROVIDED "AS IS"
               WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO WARRANTIES OF
@@ -105,7 +118,7 @@ export default function TermsOfService() {
           </div>
 
           <div>
-            <h2 className="text-xl font-black text-foreground uppercase mb-3">7. Limitation of Liability</h2>
+            <h2 className="text-xl font-black text-foreground uppercase mb-3">8. Limitation of Liability</h2>
             <p>
               TO THE FULLEST EXTENT PERMITTED BY LAW, SPARTAN FENCING SUPPLIES LLC SHALL NOT BE LIABLE FOR
               ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF YOUR USE
@@ -116,7 +129,7 @@ export default function TermsOfService() {
           </div>
 
           <div>
-            <h2 className="text-xl font-black text-foreground uppercase mb-3">8. Governing Law</h2>
+            <h2 className="text-xl font-black text-foreground uppercase mb-3">9. Governing Law</h2>
             <p>
               These Terms of Service shall be governed by and construed in accordance with the laws of the
               State of Florida, without regard to its conflict of law provisions. Any disputes arising under
@@ -126,7 +139,7 @@ export default function TermsOfService() {
           </div>
 
           <div>
-            <h2 className="text-xl font-black text-foreground uppercase mb-3">9. Changes to These Terms</h2>
+            <h2 className="text-xl font-black text-foreground uppercase mb-3">10. Changes to These Terms</h2>
             <p>
               We reserve the right to update these Terms of Service at any time. Changes will be posted on
               this page with a revised effective date. Your continued use of the Site after changes are
@@ -135,7 +148,7 @@ export default function TermsOfService() {
           </div>
 
           <div>
-            <h2 className="text-xl font-black text-foreground uppercase mb-3">10. Contact Us</h2>
+            <h2 className="text-xl font-black text-foreground uppercase mb-3">11. Contact Us</h2>
             <p>Questions about these Terms? Contact us:</p>
             <div className="mt-3 space-y-1 text-sm">
               <p><strong>Spartan Fencing Supplies LLC</strong></p>
