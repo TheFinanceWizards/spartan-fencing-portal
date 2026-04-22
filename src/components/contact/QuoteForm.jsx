@@ -164,9 +164,9 @@ export default function QuoteForm() {
             </div>
           </div>
           <span className="text-xs text-muted-foreground leading-relaxed">
-            I consent to receive <strong className="text-foreground/80">marketing text messages</strong> from
-            Spartan Fencing Supplies LLC at the phone number provided. These may include promotions, special offers,
-            and product announcements. Frequency may vary. Message &amp; data rates may apply.
+            By checking this box, I consent to receive marketing and promotional messages including special offers,
+            discounts, new product updates among others from <strong className="text-foreground/80">Spartan Fencing Supplies LLC</strong> at
+            the phone number provided. Frequency may vary. Message &amp; data rates may apply.
             Text <strong>HELP</strong> for assistance, reply <strong>STOP</strong> to opt out.
           </span>
         </label>
@@ -191,10 +191,9 @@ export default function QuoteForm() {
             </div>
           </div>
           <span className="text-xs text-muted-foreground leading-relaxed">
-            I consent to receive <strong className="text-foreground/80">non-marketing text messages</strong> from
-            Spartan Fencing Supplies LLC about my order updates, quote status, appointment reminders, and other
-            service notifications. Frequency may vary. Message &amp; data rates may apply.
-            Text <strong>HELP</strong> for assistance, reply <strong>STOP</strong> to opt out.
+            By checking this box, I consent to receive <strong className="text-foreground/80">non-marketing text messages</strong> from <strong className="text-foreground/80">Spartan Fencing Supplies LLC</strong> about
+            how these may include promotions, special offers and product announcements. Message frequency varies,
+            message &amp; data rates may apply. Text <strong>HELP</strong> for assistance, reply <strong>STOP</strong> to opt out.
           </span>
         </label>
 
