@@ -90,16 +90,14 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="border-t border-background/10 py-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-xs text-background/60">
-            © {new Date().getFullYear()} Spartan Fencing Supplies. All rights reserved.
+        <div className="border-t border-background/10 py-5 flex flex-col sm:flex-row items-center justify-between gap-2">
+          <p className="text-xs text-background/40">
+            © {new Date().getFullYear()} Spartan Fencing Supplies LLC. All rights reserved.
           </p>
-          <div className="flex items-center gap-4">
-            <Link to="/privacy" className="text-xs text-background/50 hover:text-primary transition-colors">Privacy Policy</Link>
-            <span className="text-background/20 text-xs">|</span>
-            <Link to="/terms" className="text-xs text-background/50 hover:text-primary transition-colors">Terms of Service</Link>
-            <span className="text-background/20 text-xs">|</span>
-            <Link to="/contact" className="text-xs text-background/50 hover:text-primary transition-colors">Contact Us</Link>
+          <div className="flex items-center gap-3 text-background/30">
+            <Link to="/privacy" className="text-xs hover:text-background/60 transition-colors">Privacy Policy</Link>
+            <span className="text-xs">·</span>
+            <Link to="/terms" className="text-xs hover:text-background/60 transition-colors">Terms of Service</Link>
           </div>
         </div>
       </div>
