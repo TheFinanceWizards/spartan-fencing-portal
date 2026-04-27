@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, ArrowRight, Zap, Shield, Clock } from "lucide-react";
+import { X, ArrowRight, Tag } from "lucide-react";
 
 const STORAGE_KEY = "spartanSalePopupSeen";
 const SHOW_DELAY_MS = 2500;
@@ -20,9 +20,7 @@ function shouldShow() {
 function markSeen() {
   try {
     localStorage.setItem(STORAGE_KEY, Date.now().toString());
-  } catch {
-    /* noop */
-  }
+  } catch { /* noop */ }
 }
 
 export default function SalePopup() {
@@ -39,7 +37,6 @@ export default function SalePopup() {
     markSeen();
   }, []);
 
-  // Close on Escape
   useEffect(() => {
     if (!open) return;
     const handler = (e) => { if (e.key === "Escape") close(); };
@@ -47,153 +44,104 @@ export default function SalePopup() {
     return () => document.removeEventListener("keydown", handler);
   }, [open, close]);
 
-  // Lock body scroll while open
-  useEffect(() => {
-    document.body.style.overflow = open ? "hidden" : "";
-    return () => { document.body.style.overflow = ""; };
-  }, [open]);
-
   return (
     <AnimatePresence>
       {open && (
-        // Overlay
         <motion.div
-          key="overlay"
-          className="fixed inset-0 z-[99999] flex items-center justify-center p-4 sm:p-6"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          transition={{ duration: 0.3 }}
-          onClick={close}
-          aria-modal="true"
+          key="sale-widget"
+          className="fixed bottom-6 right-6 z-[99999] w-[300px]
+                     rounded-xl overflow-hidden
+                     bg-[#1c1c1e]
+                     border border-white/10
+                     shadow-[0_8px_40px_rgba(0,0,0,0.45),0_0_0_1px_rgba(196,145,73,0.15)]"
+          initial={{ opacity: 0, y: 24, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          exit={{ opacity: 0, y: 16, scale: 0.95 }}
+          transition={{ duration: 0.4, ease: [0.16, 1, 0.3, 1] }}
           role="dialog"
-          aria-labelledby="salePopupTitle"
+          aria-modal="true"
+          aria-label="Special offer"
         >
-          {/* Backdrop */}
-          <div className="absolute inset-0 bg-black/75 backdrop-blur-sm" />
-
-          {/* Card */}
-          <motion.div
-            className="relative z-10 w-full max-w-[860px] bg-[#1c1c1e] rounded-xl overflow-hidden
-                       grid grid-cols-1 md:grid-cols-2
-                       border border-white/10
-                       shadow-[0_32px_80px_rgba(0,0,0,0.7),0_0_0_1px_rgba(196,145,73,0.12)]"
-            initial={{ opacity: 0, y: 28, scale: 0.96 }}
-            animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 16, scale: 0.97 }}
-            transition={{ duration: 0.45, ease: [0.16, 1, 0.3, 1] }}
-            onClick={(e) => e.stopPropagation()}
+          {/* Close */}
+          <button
+            onClick={close}
+            aria-label="Close"
+            className="absolute top-2.5 right-2.5 z-10
+                       w-7 h-7 rounded-full flex items-center justify-center
+                       bg-black/40 border border-white/10
+                       text-white/60 hover:text-white hover:bg-black/60
+                       transition-all duration-150"
           >
-            {/* ── Close ── */}
-            <button
+            <X className="w-3.5 h-3.5" />
+          </button>
+
+          {/* Image */}
+          <div className="relative w-full h-[180px] overflow-hidden">
+            <img
+              src="/images/dura-fence-board.jpg"
+              alt="Wood-grain Dura Fence board"
+              className="w-full h-full object-cover object-center"
+            />
+            {/* Limited stock badge */}
+            <div className="absolute top-2.5 left-2.5
+                          flex items-center gap-1.5
+                          bg-black/70 border border-primary/40 backdrop-blur-sm
+                          text-primary text-[10px] font-bold uppercase tracking-[0.15em]
+                          px-2.5 py-1 rounded-sm">
+              <Tag className="w-3 h-3" />
+              Limited Stock
+            </div>
+          </div>
+
+          {/* Body */}
+          <div className="px-4 pt-3.5 pb-4">
+            <p className="text-primary text-[9px] font-bold uppercase tracking-[0.2em] mb-1.5">
+              This Week Only
+            </p>
+
+            <h3 className="font-display text-[15px] font-black text-white uppercase leading-tight mb-1.5">
+              Wood-Grain Dura Fence Boards
+            </h3>
+
+            <p className="text-white/50 text-[12px] leading-relaxed mb-3">
+              The look of natural wood. Steel durability. Won't rot, warp, or fade — built for South Florida.
+            </p>
+
+            {/* Price row */}
+            <div className="flex items-center gap-2 mb-3
+                            bg-primary/8 border border-primary/20
+                            rounded-lg px-3 py-2.5">
+              <span className="font-display text-[28px] font-black text-white leading-none">
+                $3.00
+              </span>
+              <span className="text-white/40 text-[12px]">per board</span>
+              <span className="ml-auto text-[9px] font-bold uppercase tracking-[0.15em]
+                               text-primary bg-primary/15 px-2 py-0.5 rounded">
+                Special
+              </span>
+            </div>
+
+            {/* CTA */}
+            <Link
+              to="/products/dura-fence"
               onClick={close}
-              aria-label="Close"
-              className="absolute top-3.5 right-3.5 z-20 w-8 h-8 rounded-full
-                         flex items-center justify-center
-                         bg-white/5 border border-white/10
-                         text-white/50 hover:text-white hover:bg-white/10
-                         transition-all duration-150"
+              className="inline-flex items-center justify-center gap-2 w-full
+                         bg-gradient-to-b from-primary to-[#a37434]
+                         text-[#15110d] text-[12px] font-black uppercase tracking-[0.06em]
+                         px-4 py-3 rounded-md
+                         shadow-[0_4px_14px_rgba(196,145,73,0.3)]
+                         hover:shadow-[0_6px_18px_rgba(196,145,73,0.45)]
+                         hover:from-[#d4a050] hover:to-[#b48040]
+                         transition-all duration-200"
             >
-              <X className="w-4 h-4" />
-            </button>
+              Claim This Deal
+              <ArrowRight className="w-3.5 h-3.5" />
+            </Link>
 
-            {/* ── LEFT — Image ── */}
-            <div className="relative overflow-hidden min-h-[240px] md:min-h-0">
-              {/* Badge */}
-              <div className="absolute top-4 left-4 z-10
-                              bg-[#1c1c1e]/90 border border-primary/40
-                              text-primary text-[10px] font-bold uppercase tracking-[0.18em]
-                              px-3 py-1.5 rounded-sm backdrop-blur-sm">
-                Limited Stock
-              </div>
-
-              <motion.img
-                src="/images/dura-fence.webp"
-                alt="Wood-grain Dura Fence board — premium metal privacy fence"
-                className="w-full h-full object-cover object-center"
-                initial={{ scale: 1 }}
-                animate={{ scale: 1.06 }}
-                transition={{ duration: 8, ease: "linear" }}
-              />
-
-              {/* bottom gradient fade into card */}
-              <div className="absolute inset-0 bg-gradient-to-t from-[#1c1c1e]/60 via-transparent to-transparent md:bg-gradient-to-r md:from-transparent md:to-[#1c1c1e]/30 pointer-events-none" />
-            </div>
-
-            {/* ── RIGHT — Content ── */}
-            <div className="flex flex-col justify-center px-7 py-8 md:px-9 md:py-10">
-              {/* Eyebrow */}
-              <p className="text-primary text-[10px] font-bold uppercase tracking-[0.22em] mb-3">
-                Contractor Pricing · This Week Only
-              </p>
-
-              {/* Headline */}
-              <h2
-                id="salePopupTitle"
-                className="font-display text-2xl md:text-[26px] font-black text-white leading-[1.1] mb-3 uppercase tracking-tight"
-              >
-                Premium Wood-Grain Boards.{" "}
-                <span className="text-primary">The Look of Wood. The Life of Steel.</span>
-              </h2>
-
-              {/* Sub */}
-              <p className="text-white/55 text-[13.5px] leading-relaxed mb-5">
-                Won't rot. Won't warp. Won't fade. Dura Fence gives your clients the privacy they want
-                without the maintenance headache — and you save on every board.
-              </p>
-
-              {/* Benefits */}
-              <ul className="space-y-2 mb-5">
-                {[
-                  { icon: Shield, text: "Termite & rot-proof galvanized steel panels" },
-                  { icon: Zap,    text: "In stock — same-day pickup, Fort Lauderdale" },
-                  { icon: Clock,  text: "We beat any written quote. Bring the number." },
-                ].map(({ icon: Icon, text }) => (
-                  <li key={text} className="flex items-center gap-2.5 text-[13px] text-white/70">
-                    <Icon className="w-3.5 h-3.5 text-primary shrink-0" />
-                    {text}
-                  </li>
-                ))}
-              </ul>
-
-              {/* Price block */}
-              <div className="flex items-baseline gap-3 px-4 py-3.5
-                              bg-primary/8 border border-primary/20 rounded-lg mb-5">
-                <span className="font-display text-[36px] font-black text-white leading-none tracking-tight">
-                  $3.00
-                </span>
-                <span className="text-white/45 text-sm font-medium">per board</span>
-                <span className="ml-auto text-[10px] font-bold uppercase tracking-[0.15em]
-                                 text-primary bg-primary/12 px-2.5 py-1 rounded">
-                  Special
-                </span>
-              </div>
-
-              {/* CTA */}
-              <Link
-                to="/products/dura-fence"
-                onClick={close}
-                className="inline-flex items-center justify-center gap-2.5
-                           w-full bg-gradient-to-b from-primary to-[#a37434]
-                           text-[#15110d] text-[13px] font-black uppercase tracking-[0.07em]
-                           px-6 py-4 rounded-md
-                           shadow-[0_6px_20px_rgba(196,145,73,0.35)]
-                           hover:shadow-[0_10px_28px_rgba(196,145,73,0.5)]
-                           hover:from-[#d4a050] hover:to-[#b48040]
-                           transition-all duration-200 hover:-translate-y-0.5"
-              >
-                Claim This Deal
-                <ArrowRight className="w-4 h-4" />
-              </Link>
-
-              {/* Trust line */}
-              <p className="mt-3.5 text-center text-[11px] text-white/35 leading-relaxed">
-                Trusted by{" "}
-                <span className="text-primary/80 font-semibold">500+ South Florida contractors</span>
-                {" "}· (954) 316-9889
-              </p>
-            </div>
-          </motion.div>
+            <p className="mt-2.5 text-center text-[10px] text-white/30">
+              In stock · Same-day pickup · Fort Lauderdale
+            </p>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
