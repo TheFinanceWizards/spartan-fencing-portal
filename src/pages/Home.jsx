@@ -6,6 +6,7 @@ import FeaturedProducts from "@/components/home/FeaturedProducts";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import CTASection from "@/components/home/CTASection";
+import SalePopup from "@/components/home/SalePopup";
 
 const HOME_JSON_LD = {
   "@context": "https://schema.org",
@@ -34,6 +35,7 @@ export default function Home() {
       <WhyChooseUs />
       <TestimonialsSection />
       <CTASection />
+      <SalePopup />
     </>
   );
 }
