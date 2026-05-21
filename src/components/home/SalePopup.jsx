@@ -49,7 +49,7 @@ export default function SalePopup() {
       {open && (
         <motion.div
           key="sale-widget"
-          className="fixed bottom-6 right-6 z-[99999] w-[300px]
+          className="fixed bottom-[170px] right-6 z-[99999] w-[300px]
                      rounded-xl overflow-hidden
                      bg-[#1c1c1e]
                      border border-white/10
