@@ -15,7 +15,7 @@ const VALUES = [
 const ABOUT_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "AboutPage",
-  "url": "https://spartan-fencing-portal.vercel.app/about",
+  "url": "https://spartanfencingsupplies.com/about",
   "name": "About Spartan Fencing Supplies",
   "description": "Founded in 2023, Spartan Fencing Supplies is one of South Florida's most trusted fencing supply operations — serving contractors and property owners with quality materials at honest prices.",
   "mainEntity": {
@@ -34,7 +34,7 @@ export default function About() {
         title="About Us — South Florida's Fencing Supply Leader Since 2023"
         description="Founded in 2023, Spartan Fencing Supplies serves South Florida's contractors and property owners with quality fencing materials, honest pricing, and 98% on-time delivery."
         canonical="/about"
-        ogImage="https://spartan-fencing-portal.vercel.app/images/gates-frames.webp"
+        ogImage="https://spartanfencingsupplies.com/images/gates-frames.webp"
         jsonLd={ABOUT_JSON_LD}
       />
       {/* Header */}

@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 
 const SITE_NAME = "Spartan Fencing Supplies";
-const SITE_URL  = "https://spartan-fencing-portal.vercel.app";
+const SITE_URL  = "https://spartanfencingsupplies.com";
 const OG_IMAGE  = `${SITE_URL}/images/chain-link.webp`;
 
 /**

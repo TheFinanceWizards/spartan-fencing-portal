@@ -13,7 +13,7 @@ const SERVICES_JSON_LD = {
   "provider": {
     "@type": "HomeAndConstructionBusiness",
     "name": "Spartan Fencing Supplies",
-    "url": "https://spartan-fencing-portal.vercel.app"
+    "url": "https://spartanfencingsupplies.com"
   },
   "hasOfferCatalog": {
     "@type": "OfferCatalog",

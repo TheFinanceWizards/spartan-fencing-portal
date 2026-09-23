@@ -12,6 +12,7 @@ const ProductDetail = lazy(() => import('./pages/ProductDetail'));
 const Services      = lazy(() => import('./pages/Services'));
 const About         = lazy(() => import('./pages/About'));
 const Contact       = lazy(() => import('./pages/Contact'));
+const Export        = lazy(() => import('./pages/Export'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsOfService = lazy(() => import('./pages/TermsOfService'));
 
@@ -28,6 +29,7 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/about" element={<About />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/export" element={<Export />} />
             <Route path="/privacy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsOfService />} />
           </Route>

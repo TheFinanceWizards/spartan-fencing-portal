@@ -48,6 +48,7 @@ export default function Footer() {
                 { label: "Products", path: "/products" },
                 { label: "Contact", path: "/contact" },
                 { label: "Get a Quote", path: "/contact" },
+                { label: "Export Inquiry", path: "/export" },
               ].map((item) => (
                 <li key={item.label}>
                   <Link to={item.path} className="text-sm text-background/50 hover:text-primary transition-colors">

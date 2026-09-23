@@ -3,6 +3,7 @@ import SEO from "@/components/SEO";
 import HeroSection from "@/components/home/HeroSection";
 import StatsBar from "@/components/home/StatsBar";
 import FeaturedProducts from "@/components/home/FeaturedProducts";
+import ExportSection from "@/components/home/ExportSection";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import TestimonialsSection from "@/components/home/TestimonialsSection";
 import CTASection from "@/components/home/CTASection";
@@ -11,11 +12,11 @@ import SalePopup from "@/components/home/SalePopup";
 const HOME_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "url": "https://spartan-fencing-portal.vercel.app",
+  "url": "https://spartanfencingsupplies.com",
   "name": "Spartan Fencing Supplies",
   "potentialAction": {
     "@type": "SearchAction",
-    "target": "https://spartan-fencing-portal.vercel.app/products?q={search_term_string}",
+    "target": "https://spartanfencingsupplies.com/products?q={search_term_string}",
     "query-input": "required name=search_term_string"
   }
 };
@@ -32,6 +33,7 @@ export default function Home() {
       <HeroSection />
       <StatsBar />
       <FeaturedProducts />
+      <ExportSection />
       <WhyChooseUs />
       <TestimonialsSection />
       <CTASection />

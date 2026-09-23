@@ -11,7 +11,7 @@ const PRODUCTS_JSON_LD = {
   "@type": "ItemList",
   "name": "Spartan Fencing Products",
   "description": "Complete inventory of fencing materials including chain link, ornamental iron, vinyl, gates, and hardware.",
-  "url": "https://spartan-fencing-portal.vercel.app/products",
+  "url": "https://spartanfencingsupplies.com/products",
   "itemListElement": PRODUCT_CATEGORIES.map((p, i) => ({
     "@type": "ListItem",
     "position": i + 1,

@@ -6,7 +6,7 @@ import SEO from "@/components/SEO";
 const CONTACT_JSON_LD = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  "url": "https://spartan-fencing-portal.vercel.app/contact",
+  "url": "https://spartanfencingsupplies.com/contact",
   "name": "Contact Spartan Fencing Supplies",
   "description": "Request a quote or get in touch with Spartan Fencing Supplies. We serve contractors and property owners across South Florida.",
   "mainEntity": {
