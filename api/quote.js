@@ -2,12 +2,21 @@ import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 
+// Escape user input before placing it in the email HTML
+const esc = (value) =>
+  String(value ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
 export default async function handler(req, res) {
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method not allowed' });
   }
 
-  const { name, company, email, phone, product, projectType, message, smsMarketingConsent, smsTransactionalConsent } = req.body;
+  const { name, company, email, phone, product, projectType, message, smsMarketingConsent, smsTransactionalConsent } = req.body || {};
 
   if (!name || !email || !message) {
     return res.status(400).json({ error: 'Missing required fields' });
@@ -29,21 +38,21 @@ export default async function handler(req, res) {
           </div>
           <div style="background: #f9f9f9; padding: 24px; border-radius: 0 0 8px 8px; border: 1px solid #e5e5e5;">
             <table style="width: 100%; border-collapse: collapse;">
-              <tr><td style="padding: 8px 0; color: #666; font-size: 13px; width: 130px;">Name</td><td style="padding: 8px 0; font-weight: bold; font-size: 14px;">${name}</td></tr>
-              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Company</td><td style="padding: 8px 0; font-size: 14px;">${company || '—'}</td></tr>
-              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Email</td><td style="padding: 8px 0; font-size: 14px;"><a href="mailto:${email}" style="color: #c8952a;">${email}</a></td></tr>
-              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Phone</td><td style="padding: 8px 0; font-size: 14px;">${phone || '—'}</td></tr>
-              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Product</td><td style="padding: 8px 0; font-size: 14px;">${product || '—'}</td></tr>
-              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Project Type</td><td style="padding: 8px 0; font-size: 14px;">${projectType || '—'}</td></tr>
+              <tr><td style="padding: 8px 0; color: #666; font-size: 13px; width: 130px;">Name</td><td style="padding: 8px 0; font-weight: bold; font-size: 14px;">${esc(name)}</td></tr>
+              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Company</td><td style="padding: 8px 0; font-size: 14px;">${esc(company) || '—'}</td></tr>
+              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Email</td><td style="padding: 8px 0; font-size: 14px;"><a href="mailto:${esc(email)}" style="color: #c8952a;">${esc(email)}</a></td></tr>
+              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Phone</td><td style="padding: 8px 0; font-size: 14px;">${esc(phone) || '—'}</td></tr>
+              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Product</td><td style="padding: 8px 0; font-size: 14px;">${esc(product) || '—'}</td></tr>
+              <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">Project Type</td><td style="padding: 8px 0; font-size: 14px;">${esc(projectType) || '—'}</td></tr>
               <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">SMS Marketing</td><td style="padding: 8px 0; font-size: 14px;">${smsMarketingConsent ? '✅ Consented' : '❌ Not consented'}</td></tr>
               <tr><td style="padding: 8px 0; color: #666; font-size: 13px;">SMS Transactional</td><td style="padding: 8px 0; font-size: 14px;">${smsTransactionalConsent ? '✅ Consented' : '❌ Not consented'}</td></tr>
             </table>
             <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 16px 0;" />
             <p style="color: #666; font-size: 13px; margin: 0 0 8px;">Project Details</p>
-            <p style="font-size: 14px; line-height: 1.6; margin: 0; white-space: pre-wrap;">${message}</p>
+            <p style="font-size: 14px; line-height: 1.6; margin: 0; white-space: pre-wrap;">${esc(message)}</p>
             <hr style="border: none; border-top: 1px solid #e5e5e5; margin: 16px 0;" />
             <p style="color: #999; font-size: 12px; margin: 0;">
-              Reply directly to this email to respond to ${name} at ${email}
+              Reply directly to this email to respond to ${esc(name)} at ${esc(email)}
             </p>
           </div>
         </div>
